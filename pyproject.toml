@@ -1,0 +1,25 @@
+[project]
+name = "pde-engine"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "datasets>=5.0.0",
+    "dvc>=3.67.1",
+    "dvc-gdrive>=3.0.1",
+    "ipykernel>=7.3.0",
+    "pandas>=3.0.3",
+    "pyspark>=4.1.2",
+    "requests>=2.34.2",
+    "scikit-learn>=1.9.0",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu130" }]
+torchvision = [{ index = "pytorch-cu130" }]
